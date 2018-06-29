@@ -1,5 +1,7 @@
 librespslave
 =============
+ 接收mysql-binlog日志并解析后推送至kafka。
+------------------------------------------
 一、环境
  
  yum -y install openssl openssl-devel
