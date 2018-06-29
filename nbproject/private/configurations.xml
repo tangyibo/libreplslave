@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="bin">
+      </df>
+      <df name="include">
+        <df name="mysql">
+          <df name="mysql">
+            <df name="psi">
+              <in>mysql_file.h</in>
+              <in>mysql_thread.h</in>
+              <in>psi.h</in>
+              <in>psi_abi_v1.h</in>
+              <in>psi_abi_v2.h</in>
+            </df>
+            <in>client_plugin.h</in>
+            <in>innodb_priv.h</in>
+            <in>plugin.h</in>
+            <in>plugin_audit.h</in>
+            <in>plugin_auth.h</in>
+            <in>plugin_auth_common.h</in>
+            <in>plugin_ftparser.h</in>
+            <in>service_my_snprintf.h</in>
+            <in>service_thd_alloc.h</in>
+            <in>service_thd_wait.h</in>
+            <in>service_thread_scheduler.h</in>
+            <in>services.h</in>
+            <in>thread_pool_priv.h</in>
+          </df>
+          <in>decimal.h</in>
+          <in>errmsg.h</in>
+          <in>keycache.h</in>
+          <in>m_ctype.h</in>
+          <in>m_string.h</in>
+          <in>my_alloc.h</in>
+          <in>my_attribute.h</in>
+          <in>my_compiler.h</in>
+          <in>my_config.h</in>
+          <in>my_dbug.h</in>
+          <in>my_dir.h</in>
+          <in>my_getopt.h</in>
+          <in>my_global.h</in>
+          <in>my_list.h</in>
+          <in>my_net.h</in>
+          <in>my_pthread.h</in>
+          <in>my_sys.h</in>
+          <in>my_xml.h</in>
+          <in>mysql.h</in>
+          <in>mysql_com.h</in>
+          <in>mysql_embed.h</in>
+          <in>mysql_time.h</in>
+          <in>mysql_version.h</in>
+          <in>mysqld_ername.h</in>
+          <in>mysqld_error.h</in>
+          <in>plugin.h</in>
+          <in>plugin_audit.h</in>
+          <in>plugin_ftparser.h</in>
+          <in>sql_common.h</in>
+          <in>sql_state.h</in>
+          <in>sslopt-case.h</in>
+          <in>sslopt-longopts.h</in>
+          <in>sslopt-vars.h</in>
+          <in>typelib.h</in>
+        </df>
+      </df>
+      <df name="lib">
+      </df>
+      <df name="log">
+        <df name="2018_06">
+        </df>
+      </df>
+      <df name="src">
+        <df name="include">
+          <in>access_method_factory.h</in>
+          <in>basic_content_handler.h</in>
+          <in>basic_transaction_parser.h</in>
+          <in>binlog_api.h</in>
+          <in>binlog_driver.h</in>
+          <in>binlog_event.h</in>
+          <in>bounded_buffer.h</in>
+          <in>field_iterator.h</in>
+          <in>file_driver.h</in>
+          <in>protocol.h</in>
+          <in>resultset_iterator.h</in>
+          <in>row_of_fields.h</in>
+          <in>rowset.h</in>
+          <in>table_delete.h</in>
+          <in>table_index.h</in>
+          <in>table_insert.h</in>
+          <in>table_update.h</in>
+          <in>tcp_driver.h</in>
+          <in>type_decimal.h</in>
+          <in>utilities.h</in>
+          <in>value.h</in>
+        </df>
+        <df name="lib">
+          <in>access_method_factory.cpp</in>
+          <in>basic_content_handler.cpp</in>
+          <in>basic_transaction_parser.cpp</in>
+          <in>binary_log.cpp</in>
+          <in>binlog_driver.cpp</in>
+          <in>binlog_event.cpp</in>
+          <in>decimal.cpp</in>
+          <in>field_iterator.cpp</in>
+          <in>file_driver.cpp</in>
+          <in>protocol.cpp</in>
+          <in>resultset_iterator.cpp</in>
+          <in>row_of_fields.cpp</in>
+          <in>tcp_driver.cpp</in>
+          <in>type_decimal.cpp</in>
+          <in>utilities.cpp</in>
+          <in>value.cpp</in>
+        </df>
+        <df name="server">
+          <df name="jsoncpp">
+            <in>autolink.h</in>
+            <in>config.h</in>
+            <in>features.h</in>
+            <in>forwards.h</in>
+            <in>json.h</in>
+            <in>json_batchallocator.h</in>
+            <in>json_reader.cpp</in>
+            <in>json_value.cpp</in>
+            <in>json_writer.cpp</in>
+            <in>reader.h</in>
+            <in>value.h</in>
+            <in>writer.h</in>
+          </df>
+          <in>algo.cpp</in>
+          <in>algo.h</in>
+          <in>log4z.cpp</in>
+          <in>log4z.h</in>
+          <in>main.cpp</in>
+          <in>slave.cpp</in>
+          <in>slave.h</in>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

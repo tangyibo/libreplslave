@@ -1,0 +1,21 @@
+{
+    "mysql": {
+        "connstr": "mysql://rep:rep@172.16.56.180:3306",
+        "dbname": "whistle"
+    },
+    "kafka": {
+        "brokers": "172.16.56.180:9092,172.16.56.118:9092",
+        "topic": "whistle_binlog_cpp"
+    },
+    "tables": [
+        "ofuser_*",
+        "user_organization_*",
+        "organization_*",
+        "user_label_*",
+        "user_authority_list_*",
+        "authority_list_*",
+        "adhoc_organization_*",
+        "user_organization_post_*",
+        "label_*"
+    ]
+}

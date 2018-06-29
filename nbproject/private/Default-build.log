@@ -1,0 +1,197 @@
+if [ ! -d ./bin ]; then mkdir ./bin ; fi;
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/access_method_factory.o src/lib/access_method_factory.cpp
+In file included from src/lib/access_method_factory.cpp:21:
+./include/tcp_driver.h: In constructor ‘mysql::system::Binlog_tcp_driver::Binlog_tcp_driver(const std::string&, const std::string&, const std::string&, long unsigned int)’:
+./include/tcp_driver.h:229: warning: ‘mysql::system::Binlog_tcp_driver::m_host’ will be initialized after
+./include/tcp_driver.h:228: warning:   ‘std::string mysql::system::Binlog_tcp_driver::m_user’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:231: warning: ‘mysql::system::Binlog_tcp_driver::m_port’ will be initialized after
+./include/tcp_driver.h:177: warning:   ‘boost::asio::ip::tcp::socket* mysql::system::Binlog_tcp_driver::m_socket’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:221: warning: ‘mysql::system::Binlog_tcp_driver::m_waiting_event’ will be initialized after
+./include/tcp_driver.h:175: warning:   ‘pthread_t* mysql::system::Binlog_tcp_driver::m_event_loop’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:233: warning: ‘mysql::system::Binlog_tcp_driver::m_total_bytes_transferred’ will be initialized after
+./include/tcp_driver.h:178: warning:   ‘bool mysql::system::Binlog_tcp_driver::m_shutdown’
+./include/tcp_driver.h:47: warning:   when initialized here
+src/lib/access_method_factory.cpp: In function ‘mysql::system::Binary_log_driver* mysql::system::create_transport(const char*)’:
+src/lib/access_method_factory.cpp:131: warning: comparison between signed and unsigned integer expressions
+In file included from ./include/tcp_driver.h:29,
+                 from src/lib/access_method_factory.cpp:21:
+./include/bounded_buffer.h: In constructor ‘bounded_buffer<T>::bounded_buffer(typename std::deque<T, std::allocator<_Tp1> >::size_type) [with T = mysql::Binary_log_event*]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/bounded_buffer.h:100: warning: ‘bounded_buffer<mysql::Binary_log_event*>::m_container’ will be initialized after
+./include/bounded_buffer.h:98: warning:   ‘size_t bounded_buffer<mysql::Binary_log_event*>::capacity’
+./include/bounded_buffer.h:36: warning:   when initialized here
+In file included from ./include/access_method_factory.h:24,
+                 from src/lib/access_method_factory.cpp:20:
+./include/binlog_driver.h: In constructor ‘mysql::system::Binary_log_driver::Binary_log_driver(const FilenameT&, unsigned int) [with FilenameT = char [1]]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/binlog_driver.h:87: warning: ‘mysql::system::Binary_log_driver::m_binlog_file_name’ will be initialized after
+./include/binlog_driver.h:86: warning:   ‘long unsigned int mysql::system::Binary_log_driver::m_binlog_offset’
+./include/binlog_driver.h:34: warning:   when initialized here
+./include/binlog_driver.h: In constructor ‘mysql::system::Binary_log_driver::Binary_log_driver(const FilenameT&, unsigned int) [with FilenameT = const char*]’:
+./include/file_driver.h:46:   instantiated from ‘mysql::system::Binlog_file_driver::Binlog_file_driver(const TFilename&, unsigned int) [with TFilename = const char*]’
+src/lib/access_method_factory.cpp:88:   instantiated from here
+./include/binlog_driver.h:87: warning: ‘mysql::system::Binary_log_driver::m_binlog_file_name’ will be initialized after
+./include/binlog_driver.h:86: warning:   ‘long unsigned int mysql::system::Binary_log_driver::m_binlog_offset’
+./include/binlog_driver.h:34: warning:   when initialized here
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/basic_content_handler.o src/lib/basic_content_handler.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/basic_transaction_parser.o src/lib/basic_transaction_parser.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/binary_log.o src/lib/binary_log.cpp
+In file included from ./include/binlog_api.h:34,
+                 from src/lib/binary_log.cpp:23:
+./include/tcp_driver.h: In constructor ‘mysql::system::Binlog_tcp_driver::Binlog_tcp_driver(const std::string&, const std::string&, const std::string&, long unsigned int)’:
+./include/tcp_driver.h:229: warning: ‘mysql::system::Binlog_tcp_driver::m_host’ will be initialized after
+./include/tcp_driver.h:228: warning:   ‘std::string mysql::system::Binlog_tcp_driver::m_user’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:231: warning: ‘mysql::system::Binlog_tcp_driver::m_port’ will be initialized after
+./include/tcp_driver.h:177: warning:   ‘boost::asio::ip::tcp::socket* mysql::system::Binlog_tcp_driver::m_socket’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:221: warning: ‘mysql::system::Binlog_tcp_driver::m_waiting_event’ will be initialized after
+./include/tcp_driver.h:175: warning:   ‘pthread_t* mysql::system::Binlog_tcp_driver::m_event_loop’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:233: warning: ‘mysql::system::Binlog_tcp_driver::m_total_bytes_transferred’ will be initialized after
+./include/tcp_driver.h:178: warning:   ‘bool mysql::system::Binlog_tcp_driver::m_shutdown’
+./include/tcp_driver.h:47: warning:   when initialized here
+src/lib/binary_log.cpp: In member function ‘int mysql::Binary_log::wait_for_next_event(mysql::Binary_log_event**)’:
+src/lib/binary_log.cpp:61: warning: suggest parentheses around assignment used as truth value
+In file included from ./include/tcp_driver.h:29,
+                 from ./include/binlog_api.h:34,
+                 from src/lib/binary_log.cpp:23:
+./include/bounded_buffer.h: In constructor ‘bounded_buffer<T>::bounded_buffer(typename std::deque<T, std::allocator<_Tp1> >::size_type) [with T = mysql::Binary_log_event*]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/bounded_buffer.h:100: warning: ‘bounded_buffer<mysql::Binary_log_event*>::m_container’ will be initialized after
+./include/bounded_buffer.h:98: warning:   ‘size_t bounded_buffer<mysql::Binary_log_event*>::capacity’
+./include/bounded_buffer.h:36: warning:   when initialized here
+In file included from ./include/binlog_api.h:33,
+                 from src/lib/binary_log.cpp:23:
+./include/binlog_driver.h: In constructor ‘mysql::system::Binary_log_driver::Binary_log_driver(const FilenameT&, unsigned int) [with FilenameT = char [1]]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/binlog_driver.h:87: warning: ‘mysql::system::Binary_log_driver::m_binlog_file_name’ will be initialized after
+./include/binlog_driver.h:86: warning:   ‘long unsigned int mysql::system::Binary_log_driver::m_binlog_offset’
+./include/binlog_driver.h:34: warning:   when initialized here
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/binlog_driver.o src/lib/binlog_driver.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/binlog_event.o src/lib/binlog_event.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/decimal.o src/lib/decimal.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/field_iterator.o src/lib/field_iterator.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/file_driver.o src/lib/file_driver.cpp
+In file included from ./include/binlog_api.h:34,
+                 from ./include/file_driver.h:30,
+                 from src/lib/file_driver.cpp:21:
+./include/tcp_driver.h: In constructor ‘mysql::system::Binlog_tcp_driver::Binlog_tcp_driver(const std::string&, const std::string&, const std::string&, long unsigned int)’:
+./include/tcp_driver.h:229: warning: ‘mysql::system::Binlog_tcp_driver::m_host’ will be initialized after
+./include/tcp_driver.h:228: warning:   ‘std::string mysql::system::Binlog_tcp_driver::m_user’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:231: warning: ‘mysql::system::Binlog_tcp_driver::m_port’ will be initialized after
+./include/tcp_driver.h:177: warning:   ‘boost::asio::ip::tcp::socket* mysql::system::Binlog_tcp_driver::m_socket’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:221: warning: ‘mysql::system::Binlog_tcp_driver::m_waiting_event’ will be initialized after
+./include/tcp_driver.h:175: warning:   ‘pthread_t* mysql::system::Binlog_tcp_driver::m_event_loop’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:233: warning: ‘mysql::system::Binlog_tcp_driver::m_total_bytes_transferred’ will be initialized after
+./include/tcp_driver.h:178: warning:   ‘bool mysql::system::Binlog_tcp_driver::m_shutdown’
+./include/tcp_driver.h:47: warning:   when initialized here
+src/lib/file_driver.cpp: In member function ‘virtual int mysql::system::Binlog_file_driver::wait_for_next_event(mysql::Binary_log_event**)’:
+src/lib/file_driver.cpp:164: warning: comparison between signed and unsigned integer expressions
+In file included from ./include/tcp_driver.h:29,
+                 from ./include/binlog_api.h:34,
+                 from ./include/file_driver.h:30,
+                 from src/lib/file_driver.cpp:21:
+./include/bounded_buffer.h: In constructor ‘bounded_buffer<T>::bounded_buffer(typename std::deque<T, std::allocator<_CharT> >::size_type) [with T = mysql::Binary_log_event*]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/bounded_buffer.h:100: warning: ‘bounded_buffer<mysql::Binary_log_event*>::m_container’ will be initialized after
+./include/bounded_buffer.h:98: warning:   ‘size_t bounded_buffer<mysql::Binary_log_event*>::capacity’
+./include/bounded_buffer.h:36: warning:   when initialized here
+In file included from ./include/binlog_api.h:33,
+                 from ./include/file_driver.h:30,
+                 from src/lib/file_driver.cpp:21:
+./include/binlog_driver.h: In constructor ‘mysql::system::Binary_log_driver::Binary_log_driver(const FilenameT&, unsigned int) [with FilenameT = char [1]]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/binlog_driver.h:87: warning: ‘mysql::system::Binary_log_driver::m_binlog_file_name’ will be initialized after
+./include/binlog_driver.h:86: warning:   ‘long unsigned int mysql::system::Binary_log_driver::m_binlog_offset’
+./include/binlog_driver.h:34: warning:   when initialized here
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/protocol.o src/lib/protocol.cpp
+src/lib/protocol.cpp: In function ‘int mysql::system::proto_get_one_package(boost::asio::ip::tcp::socket*, boost::asio::streambuf&, uint8_t*)’:
+src/lib/protocol.cpp:89: warning: comparison between signed and unsigned integer expressions
+src/lib/protocol.cpp: In function ‘mysql::system::buffer_source& mysql::system::operator>>(mysql::system::buffer_source&, mysql::system::Protocol&)’:
+src/lib/protocol.cpp:213: warning: comparison between signed and unsigned integer expressions
+src/lib/protocol.cpp:209: warning: unused variable ‘ch’
+src/lib/protocol.cpp: In function ‘std::istream& mysql::system::operator>>(std::istream&, mysql::system::Protocol&)’:
+src/lib/protocol.cpp:255: warning: comparison between signed and unsigned integer expressions
+src/lib/protocol.cpp: In function ‘std::istream& mysql::system::operator>>(std::istream&, mysql::system::Protocol_chunk_vector&)’:
+src/lib/protocol.cpp:552: warning: comparison between signed and unsigned integer expressions
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/resultset_iterator.o src/lib/resultset_iterator.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/row_of_fields.o src/lib/row_of_fields.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/tcp_driver.o src/lib/tcp_driver.cpp
+In file included from ./include/binlog_api.h:34,
+                 from src/lib/tcp_driver.cpp:21:
+./include/tcp_driver.h: In constructor ‘mysql::system::Binlog_tcp_driver::Binlog_tcp_driver(const std::string&, const std::string&, const std::string&, long unsigned int)’:
+./include/tcp_driver.h:229: warning: ‘mysql::system::Binlog_tcp_driver::m_host’ will be initialized after
+./include/tcp_driver.h:228: warning:   ‘std::string mysql::system::Binlog_tcp_driver::m_user’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:231: warning: ‘mysql::system::Binlog_tcp_driver::m_port’ will be initialized after
+./include/tcp_driver.h:177: warning:   ‘boost::asio::ip::tcp::socket* mysql::system::Binlog_tcp_driver::m_socket’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:221: warning: ‘mysql::system::Binlog_tcp_driver::m_waiting_event’ will be initialized after
+./include/tcp_driver.h:175: warning:   ‘pthread_t* mysql::system::Binlog_tcp_driver::m_event_loop’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:233: warning: ‘mysql::system::Binlog_tcp_driver::m_total_bytes_transferred’ will be initialized after
+./include/tcp_driver.h:178: warning:   ‘bool mysql::system::Binlog_tcp_driver::m_shutdown’
+./include/tcp_driver.h:47: warning:   when initialized here
+src/lib/tcp_driver.cpp: In member function ‘void mysql::system::Binlog_tcp_driver::start_event_loop()’:
+src/lib/tcp_driver.cpp:560: warning: unused variable ‘executed_jobs’
+In file included from ./include/tcp_driver.h:29,
+                 from ./include/binlog_api.h:34,
+                 from src/lib/tcp_driver.cpp:21:
+./include/bounded_buffer.h: In constructor ‘bounded_buffer<T>::bounded_buffer(typename std::deque<T, std::allocator<_CharT> >::size_type) [with T = mysql::Binary_log_event*]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/bounded_buffer.h:100: warning: ‘bounded_buffer<mysql::Binary_log_event*>::m_container’ will be initialized after
+./include/bounded_buffer.h:98: warning:   ‘size_t bounded_buffer<mysql::Binary_log_event*>::capacity’
+./include/bounded_buffer.h:36: warning:   when initialized here
+In file included from ./include/binlog_api.h:33,
+                 from src/lib/tcp_driver.cpp:21:
+./include/binlog_driver.h: In constructor ‘mysql::system::Binary_log_driver::Binary_log_driver(const FilenameT&, unsigned int) [with FilenameT = char [1]]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/binlog_driver.h:87: warning: ‘mysql::system::Binary_log_driver::m_binlog_file_name’ will be initialized after
+./include/binlog_driver.h:86: warning:   ‘long unsigned int mysql::system::Binary_log_driver::m_binlog_offset’
+./include/binlog_driver.h:34: warning:   when initialized here
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/utilities.o src/lib/utilities.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/lib/value.o src/lib/value.cpp
+ar -cr ./bin/librepslave.a  src/lib/access_method_factory.o src/lib/basic_content_handler.o src/lib/basic_transaction_parser.o src/lib/binary_log.o src/lib/binlog_driver.o src/lib/binlog_event.o src/lib/decimal.o src/lib/field_iterator.o src/lib/file_driver.o src/lib/protocol.o src/lib/resultset_iterator.o src/lib/row_of_fields.o src/lib/tcp_driver.o src/lib/utilities.o src/lib/value.o
+g++ -g -Wall -fPIC -I./include  -c -o src/server/algo.o src/server/algo.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/server/log4z.o src/server/log4z.cpp
+g++ -g -Wall -fPIC -I./include  -c -o src/server/main.o src/server/main.cpp
+In file included from ./include/binlog_api.h:34,
+                 from src/server/main.cpp:22:
+./include/tcp_driver.h: In constructor ‘mysql::system::Binlog_tcp_driver::Binlog_tcp_driver(const std::string&, const std::string&, const std::string&, long unsigned int)’:
+./include/tcp_driver.h:229: warning: ‘mysql::system::Binlog_tcp_driver::m_host’ will be initialized after
+./include/tcp_driver.h:228: warning:   ‘std::string mysql::system::Binlog_tcp_driver::m_user’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:231: warning: ‘mysql::system::Binlog_tcp_driver::m_port’ will be initialized after
+./include/tcp_driver.h:177: warning:   ‘boost::asio::ip::tcp::socket* mysql::system::Binlog_tcp_driver::m_socket’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:221: warning: ‘mysql::system::Binlog_tcp_driver::m_waiting_event’ will be initialized after
+./include/tcp_driver.h:175: warning:   ‘pthread_t* mysql::system::Binlog_tcp_driver::m_event_loop’
+./include/tcp_driver.h:47: warning:   when initialized here
+./include/tcp_driver.h:233: warning: ‘mysql::system::Binlog_tcp_driver::m_total_bytes_transferred’ will be initialized after
+./include/tcp_driver.h:178: warning:   ‘bool mysql::system::Binlog_tcp_driver::m_shutdown’
+./include/tcp_driver.h:47: warning:   when initialized here
+src/server/main.cpp: In member function ‘virtual mysql::Binary_log_event* Replay_binlog::process_event(mysql::Binary_log_event*)’:
+src/server/main.cpp:172: warning: unused variable ‘row_count’
+In file included from ./include/tcp_driver.h:29,
+                 from ./include/binlog_api.h:34,
+                 from src/server/main.cpp:22:
+./include/bounded_buffer.h: In constructor ‘bounded_buffer<T>::bounded_buffer(typename std::deque<T, std::allocator<_CharT> >::size_type) [with T = mysql::Binary_log_event*]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/bounded_buffer.h:100: warning: ‘bounded_buffer<mysql::Binary_log_event*>::m_container’ will be initialized after
+./include/bounded_buffer.h:98: warning:   ‘size_t bounded_buffer<mysql::Binary_log_event*>::capacity’
+./include/bounded_buffer.h:36: warning:   when initialized here
+In file included from ./include/binlog_api.h:33,
+                 from src/server/main.cpp:22:
+./include/binlog_driver.h: In constructor ‘mysql::system::Binary_log_driver::Binary_log_driver(const FilenameT&, unsigned int) [with FilenameT = char [1]]’:
+./include/tcp_driver.h:52:   instantiated from here
+./include/binlog_driver.h:87: warning: ‘mysql::system::Binary_log_driver::m_binlog_file_name’ will be initialized after
+./include/binlog_driver.h:86: warning:   ‘long unsigned int mysql::system::Binary_log_driver::m_binlog_offset’
+./include/binlog_driver.h:34: warning:   when initialized here
+g++ -g -Wall -fPIC -I./include -o ./bin/resp_slave_server  src/server/algo.o src/server/log4z.o src/server/main.o -L./bin -lrepslave -L./lib -lpthread -lcrypto -lboost_system
